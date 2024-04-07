@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nodejs:
+    # used for local development
+    image: 'cimg/node:20.12.1'
+    user: 'pcafe'
+    working_dir: '/home/cdk'
+    volumes:
+      - './:/home/cdk'
+    command: bash
+
+# usage:
+#   docker compose run --rm nodejs
