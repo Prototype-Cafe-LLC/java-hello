@@ -1,4 +1,4 @@
-package space.prototype_cafe.lambda;
+package prototype_cafe;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
@@ -14,7 +14,7 @@ public class MyLambdaHandler implements RequestHandler<EmptyRecord, Context>{
   public Context handleRequest(EmptyRecord event, Context context)
   {
     LambdaLogger logger = context.getLogger();
-    logger.log("##handleRequest");
+    logger.log("##handleRequest" + event + context);
     return context;
   }
 }

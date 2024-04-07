@@ -57,6 +57,6 @@ export CDK_DEFAULT_REGION=__your_aws_region
 
 必要なパッケージを https://mvnrepository.com/ で探して、marven用のdependency 定義を pom.xmlに加えてから
 ```
-# 文字化けが発生する場合 less を使うとよい
-mvn compoile | less
+# 文字化けが発生する場合 less を使うと内容を確認できる
+mvn compile | less
 ```

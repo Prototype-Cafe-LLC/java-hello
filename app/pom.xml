@@ -30,7 +30,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>space.prototype_cafe.AppApp</mainClass>
+                    <mainClass>prototype_cafe.AppApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
