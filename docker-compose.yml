@@ -11,6 +11,5 @@ services:
       - './:/home/cdk'
       - '$HOME/.aws:/home/circleci/.aws'
     command: bash
-
-# usage:
-#   docker compose run --rm cdk_java
+    environment:
+      - AWS_PROFILE=yukilab
