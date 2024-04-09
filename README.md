@@ -5,12 +5,20 @@ AWS lambda で Javaを実行するための Java/CDK設定と実行される lam
 サンプルとしてlambdaを定期的に実行する。
 
 ## 必要な環境
-- [NodeJS (2024時点ではversion 20.*.* 推奨)](https://nodejs.org/en) - windows subsystem で [nvmを入れて](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)使うか、[nvm-windows](https://github.com/coreybutler/nvm-windows)を使ってインストールすることをお勧めします。保守・バージョン切り替えが楽になります。
-- [AWS CLI](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html)
-- [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install)
-- [Open JDK](https://adoptium.net/) または、 [Amazon Corretto](https://aws.amazon.com/jp/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc)
-- [Apache Maven]( https://maven.apache.org/index.html )  -- CDKによりMarven projectsが作成されます。
 
+ホストWindowsには [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) をインストールしてください。インストール後、`docker compose run --rm cdk_java` を実行するだけで、下記のパッケージが入った環境を利用できます。
+- 2024/4現在、[企業規模により、Docker Desktopの利用は有償](https://www.docker.com/pricing/?_gl=1*1umk19r*_ga*NDIzMTM4OTE2LjE2NjYwNzg1MTE.*_ga_XJWPQMJYHQ*MTcxMjU3NTI2Ni4zLjEuMTcxMjU3Nzk4NS42MC4wLjA.)となります。
+
+- Docker コンテナに含まれるパッケージ
+  - [NodeJS (2024時点ではversion 20.*.* 推奨)](https://nodejs.org/en) - windows subsystem で [nvmを入れて](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)使うか、[nvm-windows](https://github.com/coreybutler/nvm-windows)を使ってインストールすることをお勧めします。保守・バージョン切り替えが楽になります。
+  - [AWS CLI](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html) - AWSの個々のリソースの操作
+  - [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install) - AWSリソースをまとめて構築
+  - [Open JDK](https://adoptium.net/) または、 [Amazon Corretto](https://aws.amazon.com/jp/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc) - Javaの無償実行環境
+  - [Apache Maven]( https://maven.apache.org/index.html )  - Javaのビルド環境。CDKはMarven projectsを作成します。
+
+### ホストWindowsに必要な環境
+
+編集を行う場合、無償の Visual Studio Codeなどを利用してください。
 - (推奨) Visual Studio Code
 - (推奨) Extension:: AWS Toolkit for VS Code
 - (推奨) Extension:: Github Copilot
