@@ -3,9 +3,9 @@
          xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>space.prototype_cafe</groupId>
-    <artifactId>app</artifactId>
-    <version>0.1</version>
+    <groupId>prototype_cafe</groupId>
+    <artifactId>periodicRunLambda</artifactId>
+    <version>0.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,20 +30,13 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>prototype_cafe.AppApp</mainClass>
+                    <mainClass>prototype_cafe.PeriodicRun</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!-- AWS Cloud Development Kit -->
-        <dependency>
-            <groupId>software.amazon.awscdk</groupId>
-            <artifactId>aws-cdk-lib</artifactId>
-            <version>${cdk.version}</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-lambda -->
         <dependency>
             <groupId>com.amazonaws</groupId>
@@ -58,17 +51,12 @@
             <version>1.2.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/software.amazon.awscdk/events -->
-        <!-- <dependency>
-            <groupId>software.amazon.awscdk</groupId>
-            <artifactId>events</artifactId>
-            <version>1.204.0</version>
-        </dependency> -->
-
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
         <dependency>
-            <groupId>software.constructs</groupId>
-            <artifactId>constructs</artifactId>
-            <version>${constructs.version}</version>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.11.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>

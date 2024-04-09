@@ -1,13 +1,15 @@
 version: '3'
 services:
-  nodejs:
-    # used for local development
-    image: 'cimg/node:20.12.1'
-    user: 'pcafe'
+  cdk_java:
+    container_name: cdk_java
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: 'circleci'
     working_dir: '/home/cdk'
     volumes:
       - './:/home/cdk'
+      - '$HOME/.aws:/home/circleci/.aws'
     command: bash
-
-# usage:
-#   docker compose run --rm nodejs
+    environment:
+      - AWS_PROFILE=yukilab

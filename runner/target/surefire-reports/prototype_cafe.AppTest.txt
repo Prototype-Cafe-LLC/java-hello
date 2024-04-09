@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: prototype_cafe.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.68 s -- in prototype_cafe.AppTest
